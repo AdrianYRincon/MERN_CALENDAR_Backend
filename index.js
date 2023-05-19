@@ -23,11 +23,11 @@ app.use('/api/auth', require('./routes/auth') );
 app.use('/api/events', require('./routes/events') );
 
 
-
+const PORT = process.env.PORT || 4000;
 
 // Escuchar peticiones
-app.listen( process.env.PORT, () => {
-    console.log(`Servidor corriendo en puerto ${ process.env.PORT }`);
+app.listen( PORT, () => {
+    console.log(`Servidor corriendo en puerto ${ PORT }`);
 });
 
 
